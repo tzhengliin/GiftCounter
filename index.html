@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牛轉乾坤 贈品怎麼選</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div class="row">
+            <div id="showtext" class="showtext">0</div>
+            <div class="button" onclick="calclick('<')">
+                <</div>
+            </div>
+            <div class="row">
+                <div class="button" onclick="buttonclick(7)">7</div>
+                <div class="button" onclick="buttonclick(8)">8</div>
+                <div class="button" onclick="buttonclick(9)">9</div>
+                <div id="plus" class="button calbutton" onclick="calclick('+')">+</div>
+            </div>
+            <div class="row">
+                <div class="button" onclick="buttonclick(4)">4</div>
+                <div class="button" onclick="buttonclick(5)">5</div>
+                <div class="button" onclick="buttonclick(6)">6</div>
+                <div id="minus" class="button calbutton" onclick="calclick('-')">-</div>
+            </div>
+            <div class="row">
+                <div class="button" onclick="buttonclick(1)">1</div>
+                <div class="button" onclick="buttonclick(2)">2</div>
+                <div class="button" onclick="buttonclick(3)">3</div>
+                <div id="cross" class="button calbutton" onclick="calclick('*')">x</div>
+            </div>
+            <div class="row">
+                <div class="button zero" onclick="buttonclick(0)">0</div>
+                <div class="button calbutton" onclick="calclick('=')">=</div>
+                <div id="division" class="button calbutton" onclick="calclick('/')">/</div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
