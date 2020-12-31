@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- Calculator -->
     <div>
         <div class="row">
             <div id="showtext" class="showtext">0</div>
@@ -39,7 +40,23 @@
                 <div id="division" class="button calbutton" onclick="calclick('/')">/</div>
             </div>
         </div>
-        <script src="main.js"></script>
+    </div>
+    <div class="row">
+        <div class="CalBtn" onclick="CalBtn_Click();">
+            計算贈品
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="title">項</div>
+        <div class="title">贈品A <br> 3800</div>
+        <div class="title">贈品B <br> 5800</div>
+        <div class="title">贈品C <br> 8800</div>
+        <div class="title">抽獎權</div>
+    </div>
+    <div id="data"></div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>

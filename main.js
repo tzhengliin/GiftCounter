@@ -99,3 +99,41 @@ function check_calBtn() {
     if (cross.style.background == "gray") return false;
     if (division.style.background == "gray") return false;
 }
+
+function CalBtn_Click() {
+    CountGift();
+}
+
+
+function add_Data(num, n1, n2, n3, gift) {
+    data = document.querySelector('#data');
+    data.innerHTML +=
+        "<div class=\"row\">" +
+        "<div class=\"data count\">【" + num + "】</div>" +
+        "<div class=\"data\">" + n1 + "</div>" +
+        "<div class=\"data\">" + n2 + "</div>" +
+        "<div class=\"data\">" + n3 + "</div>" +
+        "<div class=\"data\">" + gift + "</div>" +
+        "</div>";
+}
+
+
+function CountGift() {
+    var price = parseInt(document.querySelector('#showtext').innerHTML);
+    var big_gift = Math.floor(price / 8800);
+    var mid_gift = Math.floor(price / 5800);
+    var small_gift = Math.floor(price / 3800);
+    var count = 0;
+    var giftcount = 0;
+
+    for (i = big_gift; i >= 0; i--) {
+        for (j = mid_gift; j >= 0; j--) {
+            if ((price - i * 8800 - j * 5800) >= 0) {
+                small_gift = Math.floor((price - i * 8800 - j * 5800) / 3800);
+                giftcount = i * 3 + j * 2 + small_gift * 1;
+
+                add_Data(count += 1, small_gift, j, i, giftcount);
+            }
+        }
+    }
+}
