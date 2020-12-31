@@ -101,6 +101,9 @@ function check_calBtn() {
 }
 
 function CalBtn_Click() {
+
+    data = document.querySelector('#data');
+    data.innerHTML = "";
     CountGift();
 }
 
